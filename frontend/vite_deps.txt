@@ -1,0 +1,32 @@
+Error: The 
+following dependencies 
+are imported but could 
+not be resolved:
+At C:\Program Files\nod
+ejs\npm.ps1:29 char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Error: The fo   
+ ll...ot be resolve    
+d::String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+
+  [36myup[39m 
+[37m[2m(imported by C
+:/wone_work/chat/fronte
+nd/src/pages/ProfilePag
+e.tsx)[22m[39m
+  [36mdate-fns[39m 
+[37m[2m(imported by C
+:/wone_work/chat/fronte
+nd/src/components/Inbox
+Dialog.tsx)[22m[39m
+

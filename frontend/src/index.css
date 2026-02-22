@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #f8fafc;
+    --color-foreground: #0f172a;
+    --color-primary: #6366f1;
+    --color-secondary: #ec4899;
+    --color-accent: #8b5cf6;
+    --color-verification: #0ea5e9;
+    --color-glass: rgba(255, 255, 255, 0.7);
+  }
+
+  :root.dark {
+    --color-background: #020617;
+    --color-foreground: #f8fafc;
+    --color-primary: #818cf8;
+    --color-secondary: #f43f5e;
+    --color-glass: rgba(15, 23, 42, 0.8);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lumina Luxe Utilities */
+.glass-morphism {
+  @apply backdrop-blur-xl border border-white/20 dark:border-white/5 bg-white/70 dark:bg-slate-900/80;
+}
+
+.luxe-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+}
+
+.luxe-text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+}
+
+.chat-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+.pb-nav-safe {
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 20px));
+}
